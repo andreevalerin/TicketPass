@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Madrid vs. FC Barcelona | TicketPass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="contenedor header-contenido">
+    <a href="inicio.html" class="logo">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <line x1="14" y1="6" x2="14" y2="18" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>
+      </svg>
+      <span>Ticket<strong>Pass</strong></span>
+    </a>
+    <nav class="nav">
+      <a href="inicio.html">Inicio</a>
+      <a href="eventos.html">Eventos</a>
+    </nav>
+    <a href="mis_entradas.html" class="cuenta">
+      <span class="avatar">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+    <circle cx="12" cy="8" r="4"/>
+    <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+  </svg>
+</span>
+      Mis entradas
+    </a>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="banner-cancha"></div>
+  <div class="contenedor banner-contenido">
+    <span class="etiqueta-en-vivo"><span class="punto"></span> Venta en vivo · Quedan 340 entradas</span>
+    <h1>Real Madrid <span>vs.</span> FC Barcelona</h1>
+    <p class="banner-subtitulo">LaLiga · Jornada 28</p>
+  </div>
+</section>
+
+<main class="contenedor principal">
+
+  <input type="radio" name="zona" id="zona-norte" class="radio-zona" hidden>
+  <input type="radio" name="zona" id="zona-sur" class="radio-zona" hidden>
+  <input type="radio" name="zona" id="zona-este" class="radio-zona" hidden checked>
+  <input type="radio" name="zona" id="zona-oeste" class="radio-zona" hidden>
+  <input type="radio" name="zona" id="zona-vip" class="radio-zona" hidden>
+
+  <div class="col-info">
+
+    <ul class="datos-evento">
+      <li>
+  <span class="dato-etiqueta">
+    <svg class="icono-dato" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M3 10h18M8 3v4M16 3v4"/>
+    </svg>
+    Fecha
+  </span>
+  <span>Sáb 22 mar, 2026</span>
+</li>
+      <svg class="icono-dato" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M12 7v5l3 3"/>
+</svg>
+      <svg class="icono-dato" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+  <path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11Z"/>
+  <circle cx="12" cy="10" r="2.4"/>
+</svg>
+      <svg class="icono-dato" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18"/>
+</svg>
+    </ul>
+
+    <section class="seccion-mapa">
+      <h2>Mapa del recinto</h2>
+      <p class="ayuda-texto">Elige una zona para ver el precio en el resumen de compra.</p>
+
+      <div class="marco-mapa">
+        <div class="mapa-recinto">
+          <label for="zona-norte" class="sector sector-norte">Norte<span>S/ 89</span></label>
+          <label for="zona-oeste" class="sector sector-oeste">Oeste<span>S/ 130</span></label>
+          <div class="cancha">
+            <label for="zona-vip" class="sector sector-vip">VIP<span>S/ 280</span></label>
+          </div>
+          <label for="zona-este" class="sector sector-este">Este<span>S/ 130</span></label>
+          <label for="zona-sur" class="sector sector-sur">Sur<span>S/ 89</span></label>
+        </div>
+      </div>
+
+      <div class="tabs-zonas">
+        <label for="zona-norte" class="tab tab-norte">Tribuna Norte</label>
+        <label for="zona-sur" class="tab tab-sur">Tribuna Sur</label>
+        <label for="zona-este" class="tab tab-este">Lateral Este</label>
+        <label for="zona-oeste" class="tab tab-oeste">Lateral Oeste</label>
+        <label for="zona-vip" class="tab tab-vip">Palco VIP</label>
+      </div>
+    </section>
+
+    <section class="seccion-info-evento">
+      <h2>Sobre el evento</h2>
+      <p>El Clásico de LaLiga llega al Santiago Bernabéu con Real Madrid y FC Barcelona peleando por los primeros puestos de la tabla. Las puertas del estadio abren 90 minutos antes del pitido inicial.</p>
+
+      <div class="tarjeta-restricciones">
+        <div class="item-restriccion">
+          <span class="icono-restriccion">🚪</span>
+          <div>
+            <h3>Apertura de puertas</h3>
+            <p>Las puertas abren a las 19:00 h. Se recomienda llegar con al menos 60 minutos de anticipación.</p>
+          </div>
+        </div>
+        <div class="item-restriccion">
+          <span class="icono-restriccion">🔞</span>
+          <div>
+            <h3>Edad mínima</h3>
+            <p>Evento apto para todo público. Menores de 14 años deben ingresar con un adulto responsable.</p>
+          </div>
+        </div>
+        <div class="item-restriccion">
+          <span class="icono-restriccion">🚫</span>
+          <div>
+            <h3>Artículos prohibidos</h3>
+            <p>No se permite el ingreso con botellas de vidrio, objetos pirotécnicos ni banderas con mástiles rígidos.</p>
+          </div>
+        </div>
+        <div class="item-restriccion">
+          <span class="icono-restriccion">🎫</span>
+          <div>
+            <h3>Presentación de entradas</h3>
+            <p>El código QR debe mostrarse en el celular o impreso. Cada código es de un solo uso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-ubicacion">
+      <h2>Cómo llegar</h2>
+      <div class="mapa-google">
+        <iframe src="https://www.google.com/maps?q=Estadio+Santiago+Bernabeu,+Madrid&output=embed" width="100%" height="280" style="border:0" loading="lazy"></iframe>
+      </div>
+      <a class="enlace-mapa" href="https://www.google.com/maps/dir/?api=1&destination=Estadio+Santiago+Bernabeu" target="_blank" rel="noopener">Ver ruta en Google Maps ↗</a>
+    </section>
+
+  </div>
+
+  <aside class="col-resumen">
+    <div class="tarjeta-resumen">
+      <div class="resumen-encabezado">
+        <div>
+          <span class="etiqueta-desde">Desde</span>
+          <span class="precio-desde">S/ 89</span>
+        </div>
+        <span class="chip-disponibles">340 disponibles</span>
+      </div>
+
+      <div class="resumen-panel panel-norte">
+        <p class="panel-zona">Tribuna Norte</p>
+        <p class="panel-precio-unidad">S/ 89 <span>por entrada</span></p>
+        <div class="panel-cantidad">
+          <label for="cantidad-norte">Cantidad</label>
+          <input type="number" id="cantidad-norte" value="2" min="1" max="10">
+        </div>
+        <div class="panel-desglose">
+          <div class="fila"><span>2 x entradas</span><span>S/ 178</span></div>
+          <div class="fila"><span>Cargo de servicio</span><span>S/ 9</span></div>
+          <div class="fila"><span>Entrega digital</span><span>Gratis</span></div>
+        </div>
+        <div class="panel-total"><span>Total</span><span>S/ 187</span></div>
+      </div>
+
+      <div class="resumen-panel panel-sur">
+        <p class="panel-zona">Tribuna Sur</p>
+        <p class="panel-precio-unidad">S/ 89 <span>por entrada</span></p>
+        <div class="panel-cantidad">
+          <label for="cantidad-sur">Cantidad</label>
+          <input type="number" id="cantidad-sur" value="2" min="1" max="10">
+        </div>
+        <div class="panel-desglose">
+          <div class="fila"><span>2 x entradas</span><span>S/ 178</span></div>
+          <div class="fila"><span>Cargo de servicio</span><span>S/ 9</span></div>
+          <div class="fila"><span>Entrega digital</span><span>Gratis</span></div>
+        </div>
+        <div class="panel-total"><span>Total</span><span>S/ 187</span></div>
+      </div>
+
+      <div class="resumen-panel panel-este">
+        <p class="panel-zona">Lateral Este</p>
+        <p class="panel-precio-unidad">S/ 130 <span>por entrada</span></p>
+        <div class="panel-cantidad">
+          <label for="cantidad-este">Cantidad</label>
+          <input type="number" id="cantidad-este" value="2" min="1" max="10">
+        </div>
+        <div class="panel-desglose">
+          <div class="fila"><span>2 x entradas</span><span>S/ 260</span></div>
+          <div class="fila"><span>Cargo de servicio</span><span>S/ 13</span></div>
+          <div class="fila"><span>Entrega digital</span><span>Gratis</span></div>
+        </div>
+        <div class="panel-total"><span>Total</span><span>S/ 273</span></div>
+      </div>
+
+      <div class="resumen-panel panel-oeste">
+        <p class="panel-zona">Lateral Oeste</p>
+        <p class="panel-precio-unidad">S/ 130 <span>por entrada</span></p>
+        <div class="panel-cantidad">
+          <label for="cantidad-oeste">Cantidad</label>
+          <input type="number" id="cantidad-oeste" value="2" min="1" max="10">
+        </div>
+        <div class="panel-desglose">
+          <div class="fila"><span>2 x entradas</span><span>S/ 260</span></div>
+          <div class="fila"><span>Cargo de servicio</span><span>S/ 13</span></div>
+          <div class="fila"><span>Entrega digital</span><span>Gratis</span></div>
+        </div>
+        <div class="panel-total"><span>Total</span><span>S/ 273</span></div>
+      </div>
+
+      <div class="resumen-panel panel-vip">
+        <p class="panel-zona">Palco VIP</p>
+        <p class="panel-precio-unidad">S/ 280 <span>por entrada</span></p>
+        <div class="panel-cantidad">
+          <label for="cantidad-vip">Cantidad</label>
+          <input type="number" id="cantidad-vip" value="2" min="1" max="10">
+        </div>
+        <div class="panel-desglose">
+          <div class="fila"><span>2 x entradas</span><span>S/ 560</span></div>
+          <div class="fila"><span>Cargo de servicio</span><span>S/ 28</span></div>
+          <div class="fila"><span>Entrega digital</span><span>Gratis</span></div>
+        </div>
+        <div class="panel-total"><span>Total</span><span>S/ 588</span></div>
+      </div>
+
+      <button type="button" class="btn-comprar">Comprar ahora</button>
+      <p class="nota-seguro">🔒 Pago seguro · Sin cargos ocultos</p>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="footer">
+  <div class="contenedor footer-contenido">
+    <div class="footer-marca">
+      <a href="inicio.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <line x1="14" y1="6" x2="14" y2="18" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>
+        </svg>
+        <span>Ticket<strong>Pass</strong></span>
+      </a>
+      <p>Fútbol, conciertos y mucho más. Compra tus entradas de forma simple y segura.</p>
+    </div>
+    <div class="footer-columna">
+      <h3>Explora</h3>
+      <a href="inicio.html">Inicio</a>
+      <a href="eventos.html">Eventos</a>
+    </div>
+    <div class="footer-columna">
+      <h3>Ayuda</h3>
+      <a href="#">Preguntas frecuentes</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-columna">
+      <h3>Legal</h3>
+      <a href="#">Términos de uso</a>
+      <a href="#">Privacidad</a>
+    </div>
+  </div>
+  <div class="contenedor footer-inferior">
+    <p>© 2026 TicketPass. Todos los derechos reservados.</p>
+    <div class="footer-redes">
+      <a href="#">Instagram</a>
+      <a href="#">X</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

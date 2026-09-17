@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear evento | TicketPass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="estilos_formulario.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="contenedor header-contenido">
+    <a href="inicio.html" class="logo">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <line x1="14" y1="6" x2="14" y2="18" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>
+      </svg>
+      <span>Ticket<strong>Pass</strong></span>
+    </a>
+    <nav class="nav">
+      <a href="inicio.html">Inicio</a>
+      <a href="mis_eventos.html">Mis eventos</a>
+    </nav>
+    <a href="panel_organizador.html" class="cuenta">
+      <span class="avatar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+        </svg>
+      </span>
+      Panel organizador
+    </a>
+  </div>
+</header>
+
+<section class="encabezado-pagina">
+  <div class="contenedor">
+    <p class="migaja">Panel organizador / Eventos / Nuevo</p>
+    <h1>Crear nuevo evento</h1>
+    <p class="encabezado-descripcion">Completa la información y las zonas de venta antes de publicarlo.</p>
+  </div>
+</section>
+
+<main class="contenedor principal-formulario">
+  <form class="formulario-evento" method="post" action="#">
+
+    <fieldset class="tarjeta-form">
+      <legend>Tipo y datos generales</legend>
+
+      <div class="campo">
+        <label for="tipo-evento">Tipo de evento</label>
+        <select id="tipo-evento" name="tipo_evento" required>
+          <option value="">Selecciona un tipo...</option>
+          <option value="futbol">Fútbol</option>
+          <option value="concierto">Concierto</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="nombre-evento">Nombre del evento</label>
+        <input type="text" id="nombre-evento" name="nombre_evento" placeholder="Ej. Real Madrid vs. FC Barcelona" required>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="fecha-evento">Fecha</label>
+          <input type="date" id="fecha-evento" name="fecha_evento" required>
+        </div>
+        <div class="campo">
+          <label for="hora-evento">Hora</label>
+          <input type="time" id="hora-evento" name="hora_evento" required>
+        </div>
+        <div class="campo">
+          <label for="estado-evento">Estado</label>
+          <select id="estado-evento" name="estado_evento">
+            <option value="proximamente">Próximamente</option>
+            <option value="en_venta">Venta en vivo</option>
+            <option value="agotado">Agotado</option>
+            <option value="finalizado">Finalizado</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="descripcion-evento">Descripción / artistas</label>
+        <textarea id="descripcion-evento" name="descripcion_evento" rows="4" placeholder="Cuenta de qué trata el evento..."></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset class="tarjeta-form">
+      <legend>Ubicación</legend>
+
+      <div class="campo">
+        <label for="recinto">Nombre del recinto</label>
+        <input type="text" id="recinto" name="recinto" placeholder="Ej. Estadio Santiago Bernabéu" required>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Av. Concha Espina, 1">
+        </div>
+        <div class="campo">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Madrid, España">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="tarjeta-form">
+      <legend>Imagen del evento</legend>
+      <div class="campo">
+        <label for="banner">Banner principal</label>
+        <input type="file" id="banner" name="banner" accept="image/*">
+        <p class="ayuda-campo">Recomendado 1600 x 500 px, formato JPG o PNG.</p>
+      </div>
+    </fieldset>
+
+    <fieldset class="tarjeta-form">
+      <legend>Zonas y precios</legend>
+      <p class="ayuda-campo">Agrega cada zona con su capacidad y precio por entrada.</p>
+
+      <div class="fila-zona">
+        <div class="campo">
+          <label>Nombre de zona</label>
+          <input type="text" name="zona_nombre[]" value="Tribuna Norte">
+        </div>
+        <div class="campo">
+          <label>Capacidad</label>
+          <input type="number" name="zona_capacidad[]" min="1" value="80">
+        </div>
+        <div class="campo">
+          <label>Precio (S/)</label>
+          <input type="number" name="zona_precio[]" min="0" step="0.10" value="89.00">
+        </div>
+      </div>
+
+      <div class="fila-zona">
+        <div class="campo">
+          <label>Nombre de zona</label>
+          <input type="text" name="zona_nombre[]" value="Tribuna Sur">
+        </div>
+        <div class="campo">
+          <label>Capacidad</label>
+          <input type="number" name="zona_capacidad[]" min="1" value="80">
+        </div>
+        <div class="campo">
+          <label>Precio (S/)</label>
+          <input type="number" name="zona_precio[]" min="0" step="0.10" value="89.00">
+        </div>
+      </div>
+
+      <div class="fila-zona">
+        <div class="campo">
+          <label>Nombre de zona</label>
+          <input type="text" name="zona_nombre[]" value="Lateral Este">
+        </div>
+        <div class="campo">
+          <label>Capacidad</label>
+          <input type="number" name="zona_capacidad[]" min="1" value="90">
+        </div>
+        <div class="campo">
+          <label>Precio (S/)</label>
+          <input type="number" name="zona_precio[]" min="0" step="0.10" value="130.00">
+        </div>
+      </div>
+
+      <div class="fila-zona">
+        <div class="campo">
+          <label>Nombre de zona</label>
+          <input type="text" name="zona_nombre[]" value="Lateral Oeste">
+        </div>
+        <div class="campo">
+          <label>Capacidad</label>
+          <input type="number" name="zona_capacidad[]" min="1" value="90">
+        </div>
+        <div class="campo">
+          <label>Precio (S/)</label>
+          <input type="number" name="zona_precio[]" min="0" step="0.10" value="130.00">
+        </div>
+      </div>
+
+      <div class="fila-zona">
+        <div class="campo">
+          <label>Nombre de zona</label>
+          <input type="text" name="zona_nombre[]" value="Palco VIP">
+        </div>
+        <div class="campo">
+          <label>Capacidad</label>
+          <input type="number" name="zona_capacidad[]" min="1" value="20">
+        </div>
+        <div class="campo">
+          <label>Precio (S/)</label>
+          <input type="number" name="zona_precio[]" min="0" step="0.10" value="280.00">
+        </div>
+      </div>
+
+      <p class="nota-js">Cuando veamos JavaScript, aquí va un botón para agregar o quitar zonas sin recargar la página.</p>
+    </fieldset>
+
+    <div class="acciones-form">
+      <button type="reset" class="btn-secundario">Cancelar</button>
+      <button type="submit" class="btn-primario">Publicar evento</button>
+    </div>
+
+  </form>
+</main>
+
+<footer class="footer">
+  <div class="contenedor footer-contenido">
+    <div class="footer-marca">
+      <a href="inicio.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <line x1="14" y1="6" x2="14" y2="18" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>
+        </svg>
+        <span>Ticket<strong>Pass</strong></span>
+      </a>
+      <p>Fútbol, conciertos y mucho más. Compra tus entradas de forma simple y segura.</p>
+    </div>
+    <div class="footer-columna">
+      <h3>Explora</h3>
+      <a href="inicio.html">Inicio</a>
+      <a href="eventos.html">Eventos</a>
+    </div>
+    <div class="footer-columna">
+      <h3>Ayuda</h3>
+      <a href="#">Preguntas frecuentes</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-columna">
+      <h3>Legal</h3>
+      <a href="#">Términos de uso</a>
+      <a href="#">Privacidad</a>
+    </div>
+  </div>
+  <div class="contenedor footer-inferior">
+    <p>© 2026 TicketPass. Todos los derechos reservados.</p>
+    <div class="footer-redes">
+      <a href="#">Instagram</a>
+      <a href="#">X</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

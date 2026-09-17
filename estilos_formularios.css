@@ -1,0 +1,142 @@
+.encabezado-pagina {
+  background: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
+  padding: 28px 0;
+}
+
+.migaja {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  margin-bottom: 8px;
+}
+
+.encabezado-pagina h1 {
+  font-size: 28px;
+}
+
+.encabezado-descripcion {
+  color: var(--color-texto-suave);
+  margin-top: 6px;
+}
+
+.principal-formulario {
+  padding-top: 32px;
+  padding-bottom: 60px;
+  max-width: 780px;
+}
+
+.tarjeta-form {
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 26px;
+  margin-bottom: 24px;
+}
+
+.tarjeta-form legend {
+  font-size: 17px;
+  font-weight: 600;
+  padding: 0 6px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-family: var(--fuente-principal);
+  font-size: 14px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+}
+
+.ayuda-campo {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.fila-zona {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-borde);
+}
+
+.fila-zona:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.nota-js {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.acciones-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-primario,
+.btn-secundario {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primario {
+  background: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.btn-primario:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.btn-secundario {
+  background: var(--color-blanco);
+  border-color: var(--color-borde);
+  color: var(--color-texto);
+}
+
+.btn-secundario:hover {
+  border-color: var(--color-texto-suave);
+}
+
+@media (max-width: 700px) {
+  .fila-campos,
+  .fila-zona {
+    grid-template-columns: 1fr;
+  }
+}
